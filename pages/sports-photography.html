@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Olivia Marter</title>
+		<link rel="icon" href="./resources/img/kephalonia-palette-knife.jpeg" />
+		<link rel="stylesheet" href="../master.css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="header-container">
+			<div class="wrapper">
+				<header>
+					<div class="logo">
+						<a href="../index.html"> <h2>OLIVIA MARTER</h2></a>
+					</div>
+
+					<div class="toggle-btn">
+						<span class="one"></span>
+						<span class="two"></span>
+					</div>
+				</header>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="data">
+				<ul>
+					<ul>
+						<li><a class="nav-link" href="../pages/photography.html">Photography</a></li>
+						<li><a class="nav-link" href="../pages/artwork.html">Artwork</a></li>
+						<li><a class="nav-link" href="../pages/graphic-design.html">Graphic Design</a></li>
+						<li>
+							<a class="nav-link" href="../pages/about.html">About me</a>
+						</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="main-container">
+				<div class="lhs">
+					<div class="sidebar">
+						<div class="sidebar-top">
+							<div class="logo sidebar-logo">
+								<a href="../index.html"><h2>OLIVIA MARTER</h2></a>
+							</div>
+							<div class="sidebar-nav">
+								<ul>
+									<li><a class="nav-link" href="../pages/photography.html">Photography</a></li>
+									<li><a class="nav-link" href="../pages/artwork.html">Artwork</a></li>
+									<li><a class="nav-link" href="../pages/graphic-design.html">Graphic Design</a></li>
+									<li>
+										<a class="nav-link" href="../pages/about.html">About me</a>
+									</li>
+								</ul>
+							</div>
+							<div class="sidebar-secondary-nav">
+								<ul>
+									<li>
+										<a
+											class="nav-link"
+											href="https://www.instagram.com/marter_photography/"
+											target="_blank"
+											>Photography Instagram</a
+										>
+									</li>
+
+									<li>
+										<a
+											class="nav-link"
+											href="https://www.instagram.com/marter.draws/"
+											target="_blank"
+											>Artwork Instagram</a
+										>
+									</li>
+
+									<li>
+										<a
+											class="nav-link"
+											href="https://www.linkedin.com/in/olivia-marter-1014a119a/"
+											target="_blank"
+											>LinkedIn</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sidebar-bottom">
+							<div class="sidebar-footer">
+								<div class="sidebar-footer-inner">
+									<p>
+										Site created with <ion-icon name="heart"></ion-icon> by Jude
+										Cornish<br /><a
+											href="https://www.judecornish.co.uk"
+											target="_blank"
+											>judecornish.co.uk</a
+										>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					<div class="rhs">
+						<a class="back-button-a" href="../pages/photography.html">
+							<div class="back-button">
+								<ion-icon
+									class="back-button-icon"
+									name="arrow-back-outline"
+								></ion-icon>
+								<p class="back-button-text">Go back</p>
+							</div>
+						</a>
+						<div class="landing">
+							<div class="landing-header">
+								<div class="h1-container">
+									<h1>Sports Photography</h1>
+								</div>
+							</div>
+							<div class="landing-img">
+								<img
+									src="../resources/img/jude-squash.jpeg"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="series-desc">
+							<p>
+								Description of the collection.
+							</p>
+						</div>
+
+
+						<div class="piece-container is-visible show-on-scroll">
+							<div class="piece-image">
+								<img src="../resources/img/jude-squash.jpeg" alt="" />
+							</div>
+							<div class="piece-desc">
+								<p class="photo-desc">"Photo Title"</p>
+								<p class="photo-material">
+									<em>Moving shot of Jude Cornish playing Squash.</em>
+								</p>
+								<p class="piece-date">05/2021</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-inner">
+			<p>
+				Site created with <ion-icon name="heart"></ion-icon> by Jude Cornish -
+				<a href="https://www.judecornish.co.uk" target="_blank"
+					>judecornish.co.uk</a
+				>
+			</p>
+		</div>
+
+		<script type="text/javascript">
+			var t1 = new TimelineMax({ paused: true });
+
+			t1.to(".one", 0.4, {
+				y: 4,
+				rotation: 45,
+				ease: Expo.easeInOut,
+			});
+			t1.to(".two", 0.4, {
+				y: -4,
+				rotation: -45,
+				ease: Expo.easeInOut,
+				delay: -0.8,
+			});
+
+			t1.to(".menu", 1, {
+				top: "0%",
+				ease: Expo.easeInOut,
+				delay: -0.5,
+			});
+
+			t1.staggerFrom(
+				".menu ul li",
+				1,
+				{ x: -200, opacity: 0, ease: Expo.easeOut },
+				0.1
+			);
+
+			t1.reverse();
+			$(document).on("click", ".toggle-btn", function () {
+				t1.reversed(!t1.reversed());
+			});
+			$(document).on("click", "a", function () {
+				t1.reversed(!t1.reversed());
+			});
+		</script>
+		<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+		<script src="../app.js"></script>
+	</body>
+</html>
