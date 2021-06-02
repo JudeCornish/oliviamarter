@@ -662,3 +662,23 @@ h2 {
 .display-none {
 	display: none;
 }
+
+
+.banner {
+	width: 100%;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	height: 4vh;
+	line-height: 4vh;
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background-color:rgb(37, 37, 37);
+	font-weight: 100;
+	position: fixed;
+}
+
+.banner h4 {
+	font-weight: 300;
+}
+
